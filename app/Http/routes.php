@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/mail/{szoveg?}', function ($szoveg = '') {
+
+    Mail::raw('teszt ' . $szoveg, function ($message) {
+        $message->to('shon.gd8@gmail.com');
+    });
+});
