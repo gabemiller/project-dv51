@@ -7,11 +7,36 @@
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/slider_ext.css" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" async="" defer="" src="js/platform.js" gapi_processed="true">
+    <script type="text/javascript" async="" defer="" src="js/platform.js" gapi_processed="true"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript">
+        function setWelcomePageBackgroundWithAnimation(image) {
+            $("#page-welcome").animate({opacity: 0}, 'slow', function() {
+                $(this).css("background", "#292929 url(../img/"+image+") 50% 0 repeat fixed").animate({opacity: 1});
+            });
+        }
+        $( document ).ready(function() {
+            $( "#welcome-select" ).change(function() {
+                switch($( "#welcome-select" ).val()) {
+                    case "0":
+                        setWelcomePageBackgroundWithAnimation("kep.jpg");
+                        break;
+                    case "1":
+                        setWelcomePageBackgroundWithAnimation("ios.jpg");
+                        break;
+                    case "2":
+                        setWelcomePageBackgroundWithAnimation("android.jpg");
+                        break;
+                    case "3":
+                        setWelcomePageBackgroundWithAnimation("web.jpg");
+                        break;
+                }
+            });
+        });
     </script>
 </head>
 <body itemscope="" itemtype="http://schema.org/Electrician">
-<div class="pages white paralax page-welcome" id="page-welcome" style="background-position: 0% 0px;">
+<div class="pages white paralax page-welcome" id="page-welcome" style="background-position: 0% 0px; background: #292929 url(../img/kep.jpg) 50% 0 repeat fixed;">
     <div class="overlay"></div>
     <!-- Centralized content -->
     <div class="centralized" style="margin-top: -197.5px; margin-left: -615px; visibility: visible; opacity: 1;">
@@ -23,33 +48,29 @@
                         <img itemprop="image" src="img/divide_logo.svg" alt="Divide">
                     </div>
 
-                    <div class="line-divider" id="welcome-messages">
-                        <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 96px;"><ul class="slides" style="width: auto; position: relative; top: -96px;"><li style="float: none; list-style: none; position: relative; width: 1230px;" class="bx-clone">
-                            <h1>Fejlesztés és üzemeltetés</h1>
-                        </li>
-                            <li style="float: none; list-style: none; position: relative; width: 1230px;">
-                                <h1 itemprop="name">Divide</h1>
-                            </li>
-                            <li style="float: none; list-style: none; position: relative; width: 1230px;">
-                                <h1>Fejlesztés és üzemeltetés</h1>
-                            </li>
-                            <li style="float: none; list-style: none; position: relative; width: 1230px;" class="bx-clone">
-                                <h1 itemprop="name">Divide</h1>
-                            </li></ul></div></div>
+                    <h1>Divide</h1>
+
+                    <div style=" font-size: 30px;  font-family: 'ChunkFiveRegular', 'Open Sans', sans-serif; letter-spacing: 1px; padding-bottom: 80px; padding-top: 80px">
+                        A need a new...
+                        <select id="welcome-select">
+                            <option value="0">Please select</option>
+                            <option value="1">iOS App</option>
+                            <option value="2">Android App</option>
+                            <option value="3">Website</option>
+                        </select>
                     </div>
-                    <p>Divide-Expo Kft.</p>
+
+
                 </div>
             </div>
         </div>
-        <div class="scroll-down">
+        <div class="scroll-down" >
             <a class="btn" href="http://localhost/index.html#page-work">
-                <i class="fa fa-angle-down fa-fw"></i>
+                Get started
             </a>
         </div>
     </div>
 </div>
-
-
 
 
 <div class="pages page-work" id="page-work">
