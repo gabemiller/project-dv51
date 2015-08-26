@@ -12,6 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('site.default.index');
 });
 
+
+Route::get('/custom', function () {
+    return view('site.default.custom');
+});
