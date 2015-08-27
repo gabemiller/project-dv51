@@ -1,5 +1,4 @@
 @import "bootstrap";
-@import "_partials/variables";
 // Owl carousel
 @import "owl-carousel/owl.carousel";
 @import "owl-carousel/owl.theme.default";
@@ -14,9 +13,8 @@ body {
 }
 
 body {
-  font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+  font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
 }
-
 
 a {
   color: $divide-green;
@@ -27,7 +25,7 @@ a {
 
 a:hover,
 a:focus {
-  color: darken($divide-green,10);
+  color: darken($divide-green, 10);
 }
 
 h1,
@@ -36,17 +34,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
-
-.logo{
-  margin: 20px auto;
-  width: 150px;
-  height: 150px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .header-section {
   position: relative;
+  margin: 100px 0 0;
   @extend .page-section;
 }
 
@@ -106,8 +99,7 @@ hr.light {
 
 // Header
 
-
-.main-head-text{
+.main-head-text {
   color: white;
   font-weight: bold;
   margin: 0 0 100px;
@@ -119,7 +111,6 @@ hr.light {
   color: white;
   margin: 0 10px 0 0;
 }
-
 
 // Owl carousel header
 
@@ -147,7 +138,6 @@ hr.light {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   background-color: #fff;
   transition: all .35s;
-  top: -50px;
 
   .navbar-header {
 
@@ -159,7 +149,7 @@ hr.light {
       transition: all .35s;
 
       &:hover, &:focus {
-        color: darken($divide-green,10);
+        color: darken($divide-green, 10);
       }
     }
   }
@@ -194,62 +184,98 @@ hr.light {
 
 @media(min-width: 768px) {
   .navbar-default {
-    border-color: rgba(255, 255, 255, .3);
+    border-color: transparent;
+    height: 100px;
     background-color: transparent;
 
     .navbar-header {
 
       .navbar-brand {
-        color: rgba(255, 255, 255, .7);
-        &:hover, &:focus {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        margin: 20px 5px;
+        transition: all .35s;
+        position: relative;
+
+        &:focus {
+          transform: rotate(0deg);
+        }
+        &:hover {
+          transform: rotate(45deg);
+        }
+
+        svg{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: all .35s;
+          opacity: .7;
+          path{
+            fill:white;
+            transition: all .35s;
+          }
+        }
+      }
+
+    }
+
+    .nav {
+      > li {
+        > a, > a:focus {
+          color: rgba(255, 255, 255, .7);
+          padding-top: 40px;
+          padding-bottom: 40px;
+          transition: all .35s;
+        }
+
+        > a:hover, > a:focus:hover {
           color: #fff;
         }
       }
-
-      .nav{
-        >li{
-          >a, >a:focus{
-            color: rgba(255, 255, 255, .7);
-          }
-
-          >a:hover, >a:focus:hover{
-            color: #fff;
-          }
-        }
-      }
-
     }
 
-    &.affix{
+    &.affix {
       border-color: rgba(34, 34, 34, .05);
       background-color: #fff;
-      top: 0;
+      height: 50px;
 
-      .navbar-header{
+      .navbar-header {
 
-        .navbar-brand{
-          font-size: 14px;
-          color: $divide-green;
+        .navbar-brand {
+          width: 30px;
+          height: 30px;
+          margin: 10px 5px;
 
-          &:hover, &:focus{
-            color: darken($divide-green,10);
+          svg{
+            opacity: 1;
+            path{
+              fill:$divide-green;
+            }
+          }
+
+        }
+
+      }
+
+      .nav {
+
+        > li {
+          > a, > a:focus {
+            color: $divide-gray;
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
+
+          > a:hover, > a:focus:hover {
+            color: $divide-green;
           }
         }
 
       }
     }
-  }
-
-
-
-  .navbar-default.affix .nav > li > a,
-  .navbar-default.affix .nav > li > a:focus {
-    color: #222;
-  }
-
-  .navbar-default.affix .nav > li > a:hover,
-  .navbar-default.affix .nav > li > a:focus:hover {
-    color: $divide-green;
   }
 
   //Portfolio
@@ -259,7 +285,7 @@ hr.light {
     max-width: 400px;
   }
 
-  @media(min-width:992px) {
+  @media(min-width: 992px) {
     .service-box {
       margin: 20px auto 0;
     }
@@ -285,7 +311,7 @@ hr.light {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: transparentize($divide-green,.1);
+    background: transparentize($divide-green, .1);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -302,7 +328,7 @@ hr.light {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   }
 
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -319,7 +345,7 @@ hr.light {
     opacity: 1;
   }
 
-  @media(min-width:768px) {
+  @media(min-width: 768px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
       font-size: 16px;
     }

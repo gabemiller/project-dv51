@@ -6258,7 +6258,7 @@ body {
   height: 100%; }
 
 body {
-  font-family: Merriweather,'Helvetica Neue',Arial,sans-serif; }
+  font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif; }
 
 a {
   color: #479f00;
@@ -6274,15 +6274,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; }
-
-.logo {
-  margin: 20px auto;
-  width: 150px;
-  height: 150px; }
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
 
 .header-section {
-  position: relative; }
+  position: relative;
+  margin: 100px 0 0; }
 
 .i-want-form {
   position: absolute;
@@ -6356,8 +6352,7 @@ hr.light {
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   background-color: #fff;
-  transition: all 0.35s;
-  top: -50px; }
+  transition: all 0.35s; }
   .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -6381,31 +6376,58 @@ hr.light {
 
 @media (min-width: 768px) {
   .navbar-default {
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+    height: 100px;
     background-color: transparent; }
     .navbar-default .navbar-header .navbar-brand {
-      color: rgba(255, 255, 255, 0.7); }
-      .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff; }
-    .navbar-default .navbar-header .nav > li > a, .navbar-default .navbar-header .nav > li > a:focus {
-      color: rgba(255, 255, 255, 0.7); }
-    .navbar-default .navbar-header .nav > li > a:hover, .navbar-default .navbar-header .nav > li > a:focus:hover {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      margin: 20px 5px;
+      transition: all 0.35s;
+      position: relative; }
+      .navbar-default .navbar-header .navbar-brand:focus {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+      .navbar-default .navbar-header .navbar-brand:hover {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .navbar-default .navbar-header .navbar-brand svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.35s;
+        opacity: .7; }
+        .navbar-default .navbar-header .navbar-brand svg path {
+          fill: white;
+          transition: all 0.35s; }
+    .navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
+      color: rgba(255, 255, 255, 0.7);
+      padding-top: 40px;
+      padding-bottom: 40px;
+      transition: all 0.35s; }
+    .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
       color: #fff; }
     .navbar-default.affix {
       border-color: rgba(34, 34, 34, 0.05);
       background-color: #fff;
-      top: 0; }
+      height: 50px; }
       .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 14px;
+        width: 30px;
+        height: 30px;
+        margin: 10px 5px; }
+        .navbar-default.affix .navbar-header .navbar-brand svg {
+          opacity: 1; }
+          .navbar-default.affix .navbar-header .navbar-brand svg path {
+            fill: #479f00; }
+      .navbar-default.affix .nav > li > a, .navbar-default.affix .nav > li > a:focus {
+        color: #403f3d;
+        padding-top: 15px;
+        padding-bottom: 15px; }
+      .navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover {
         color: #479f00; }
-        .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus {
-          color: #306c00; }
-  .navbar-default.affix .nav > li > a,
-  .navbar-default.affix .nav > li > a:focus {
-    color: #222; }
-  .navbar-default.affix .nav > li > a:hover,
-  .navbar-default.affix .nav > li > a:focus:hover {
-    color: #479f00; }
   .service-box {
     margin: 50px auto 0;
     max-width: 400px; } }
@@ -6443,7 +6465,7 @@ hr.light {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; }
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
     text-transform: uppercase;
     font-size: 14px;
