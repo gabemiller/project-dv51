@@ -3,3 +3,5 @@ vendor
 composer.lock
 .env
 server.php
+node_modules
+bower_components

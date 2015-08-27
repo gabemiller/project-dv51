@@ -1,0 +1,62 @@
+.btn-round {
+  border-radius: 300px;
+}
+
+.btn-square {
+  border-radius: 0px;
+}
+
+.btn-xl {
+  font-size: 24px;
+  padding: 15px 20px;
+}
+
+.btn-border {
+  border: 2px solid #fefefe;
+  background-color: transparent;
+}
+
+.btn-divide-green {
+  border-color: $divide-green;
+  background-color: transparent;
+  transition: background .35s;
+  color: white;
+
+  &:hover, &:focus {
+    background-color: $divide-green;
+    color: white;
+  }
+
+}
+
+.btn-divide-grey {
+  border-color: $divide-green;
+  background-color: transparent;
+  transition: background .35s;
+  color: white;
+
+  &:hover, &:focus {
+    background-color: $divide-green;
+    color: white;
+  }
+}
+
+.btn-dropdown {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+
+  border: 2px dotted;
+
+  transition: all .35s;
+
+  &:hover,
+  &:active,
+  &.active:focus,
+  &.active.focus,
+  &.dropdown-toggle:focus {
+    border-color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    background-color: transparent;
+  }
+}
